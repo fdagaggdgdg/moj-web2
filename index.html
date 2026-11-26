@@ -3,33 +3,188 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moje portfólio — začiatok</title>
-  <!-- Vzhľad stránky je v samostatnom súbore styles.css (vrstva CSS) -->
+  <meta name="description" content="Osobné portfólio s ukážkami mojich projektov.">
+  <title>Meno Priezvisko — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="hlavicka" id="domov">
+    <nav class="navigacia obsah" aria-label="Hlavná navigácia">
+      <a class="logo" href="#domov" aria-label="Domov">MP<span>.</span></a>
 
-  <main class="uvitanie">
-    <div class="emoji">👋</div>
-    <h1>Tu vznikne moje portfólio</h1>
-    <p class="podtext">
-      Toto je štartová stránka kurzu <strong>Tvorba webstránok</strong>.
-      Odteraz ju budeš meniť ty — s pomocou AI asistenta.
-    </p>
+      <button class="menu-tlacidlo" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-ciara"></span>
+        <span class="menu-ciara"></span>
+        <span class="menu-ciara"></span>
+        <span class="sr-only">Otvoriť menu</span>
+      </button>
 
-    <div class="karta">
-      <p class="karta-nadpis">Ako začať:</p>
-      <ol>
-        <li>Otvor <strong>Copilot Chat</strong> (ikona Copilota vpravo) — sem píšeš, čo chceš vytvoriť.</li>
-        <li>Tento súbor <code>index.html</code> si pozri v <strong>živom náhľade</strong>: pravý klik naň → <em>Show Preview</em>.</li>
-        <li>Choď na <strong>Blok 7</strong> kurzu a postupuj podľa neho.</li>
-      </ol>
-    </div>
+      <div class="menu" id="menu">
+        <a href="#projekty">Projekty</a>
+        <a href="#o-mne">O mne</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </nav>
+  </header>
 
-    <p class="poznamka">
-      Keď spravíš prvú zmenu, tento text pokojne zmaž — je len na úvod.
-    </p>
+  <main>
+    <section class="hero obsah" aria-labelledby="hero-nadpis">
+      <div class="hero-text zjav-vstup">
+        <p class="prednadpis">Ahoj, som</p>
+        <h1 id="hero-nadpis">Meno Priezvisko</h1>
+        <p class="hero-popis">
+          Tvorím moderné digitálne zážitky, ktoré majú jasný účel,
+          intuitívne fungujú a pôsobia prehľadne.
+        </p>
+        <div class="hero-akcie">
+          <a class="tlacidlo tlacidlo-primarne" href="#projekty">
+            Pozrieť projekty
+            <span aria-hidden="true">↓</span>
+          </a>
+          <a class="textovy-link" href="#o-mne">Viac o mne</a>
+        </div>
+      </div>
+
+      <div class="hero-visual zjav-vstup" aria-hidden="true">
+        <div class="vizual-oramovanie">
+          <svg class="hero-ilustracia" viewBox="0 0 390 390" role="presentation">
+            <circle cx="195" cy="195" r="136" fill="#e3f2e5"/>
+            <path d="M83 238c38-37 76-49 112-36 36 13 66 8 112-31v128H83z" fill="#afc7e8" opacity=".58"/>
+            <path d="M109 244V157l74-42 74 42v87" fill="#ffffff" opacity=".92"/>
+            <path d="M109 157l74-42 74 42-74 28z" fill="#344a7b"/>
+            <rect x="139" y="174" width="88" height="70" rx="4" fill="#f4f4f4"/>
+            <rect x="151" y="188" width="64" height="56" rx="3" fill="#003d80"/>
+            <rect x="159" y="198" width="48" height="46" rx="2" fill="#ffffff" opacity=".92"/>
+            <path d="M183 198v46M159 221h48" fill="none" stroke="#344a7b" stroke-width="5"/>
+            <circle cx="183" cy="221" r="7" fill="#d5a528"/>
+            <path d="M83 277c54-18 112-15 224 12v12H83z" fill="#2d3e68"/>
+            <path d="M128 291c44-23 96-19 146 1" fill="none" stroke="#e3f2e5" stroke-width="8" stroke-linecap="round"/>
+            <circle cx="287" cy="112" r="16" fill="#d5a528" opacity=".9"/>
+            <path d="M287 84v12M287 128v12M259 112h12M303 112h12" stroke="#344a7b" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekcia projekty" id="projekty" aria-labelledby="projekty-nadpis">
+      <div class="obsah">
+        <div class="sekcia-hlava zjav">
+          <div>
+            <p class="prednadpis">Vybrané práce</p>
+            <h2 id="projekty-nadpis">Projekty</h2>
+          </div>
+          <p class="sekcia-popis">Niekoľko ukážok práce zameranej na dizajn, funkčnosť a používateľský zážitok.</p>
+        </div>
+
+        <div class="projekt-grid">
+          <article class="projekt-karta zjav">
+            <div class="projekt-obrazok projekt-obrazok-modry" aria-hidden="true">
+              <div class="mockup-okno">
+                <span></span><span></span><span></span>
+                <div class="mockup-telo">
+                  <b></b>
+                  <i></i>
+                  <i></i>
+                </div>
+              </div>
+            </div>
+            <div class="projekt-telo">
+              <p class="projekt-kategoria">Webový dizajn</p>
+              <h3>Moderný informačný portál</h3>
+              <p>Čistý responzívny web vytvorený s dôrazom na ľahkú orientáciu a prehľadnosť obsahu.</p>
+              <a class="projekt-link" href="#" aria-label="Pozrieť projekt Moderný informačný portál">
+                Pozrieť projekt <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="projekt-karta zjav">
+            <div class="projekt-obrazok projekt-obrazok-svetly" aria-hidden="true">
+              <div class="dashboard-mockup">
+                <div class="dashboard-menu"></div>
+                <div class="dashboard-content">
+                  <b></b>
+                  <div class="dashboard-graf">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="projekt-telo">
+              <p class="projekt-kategoria">UX / UI dizajn</p>
+              <h3>Dashboard pre mobilnú aplikáciu</h3>
+              <p>Intuitívne rozhranie, ktoré zrozumiteľne zobrazuje údaje a podporuje rýchle rozhodovanie.</p>
+              <a class="projekt-link" href="#" aria-label="Pozrieť projekt Dashboard pre mobilnú aplikáciu">
+                Pozrieť projekt <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="projekt-karta zjav">
+            <div class="projekt-obrazok projekt-obrazok-oranzovy" aria-hidden="true">
+              <div class="mobil-mockup">
+                <span class="mobil-uvod"></span>
+                <span class="mobil-tlacidlo"></span>
+                <span class="mobil-karta"></span>
+              </div>
+            </div>
+            <div class="projekt-telo">
+              <p class="projekt-kategoria">Frontend</p>
+              <h3>Responzívna landing page</h3>
+              <p>Dynamická stránka pre mobil aj počítač s dôrazom na rýchlosť a jednoduché použitie.</p>
+              <a class="projekt-link" href="#" aria-label="Pozrieť projekt Responzívna landing page">
+                Pozrieť projekt <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekcia o-mne" id="o-mne" aria-labelledby="o-mne-nadpis">
+      <div class="obsah o-mne-grid">
+        <figure class="o-mne-fotka zjav">
+          <img src="img/fotka.jpg" alt="Andrej Patkan">
+        </figure>
+        <div class="o-mne-text zjav">
+          <p class="prednadpis">Niečo o sebe</p>
+          <h2 id="o-mne-nadpis">Rád premieňam nápady na použiteľné riešenia</h2>
+          <p>
+            Zaujímam sa o digitálny dizajn, tvorbu webov a technológie,
+            ktoré ľuďom zjednodušujú každodenné úlohy. Pri práci spájam
+            estetiku s funkčnosťou a venujem pozornosť detailom.
+          </p>
+          <p>
+            Na svojich projektoch pracujem od prvotnej myšlienky až po
+            výslednú stránku — od návrhu rozhrania cez vývoj až po
+            finálne doladenie.
+          </p>
+          <div class="znalosti" aria-label="Zručnosti">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>UX / UI</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="paticka" id="kontakt">
+    <div class="obsah paticka-vnutro zjav">
+      <div>
+        <p class="prednadpis">Máš projekt alebo nápad?</p>
+        <h2>Poďme sa spojiť.</h2>
+      </div>
+      <a class="tlacidlo tlacidlo-svetle" href="mailto:meno@example.sk">Napísať správu <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="obsah paticka-spodok">
+      <p>© <span id="rok"></span> Meno Priezvisko</p>
+      <a href="#domov">Naspäť hore ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
