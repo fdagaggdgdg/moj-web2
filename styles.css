@@ -71,21 +71,53 @@ a {
 }
 
 .logo {
+  position: relative;
+  isolation: isolate;
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--modra-tmava);
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 16px 16px 16px 5px;
+  background: linear-gradient(145deg, #344a7b, var(--modra-tmava));
   color: var(--biela);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.08em;
   text-decoration: none;
+  box-shadow: 0 8px 18px rgba(7, 63, 130, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px 12px 12px 3px;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 11px 22px rgba(7, 63, 130, 0.24);
+}
+
+.logo:focus-visible {
+  outline: 3px solid var(--modra-svetla);
+  outline-offset: 3px;
 }
 
 .logo span {
-  color: var(--modra-svetla);
+  position: absolute;
+  right: 7px;
+  bottom: 6px;
+  width: 7px;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #d5a528;
+  color: transparent;
 }
 
 .menu {
@@ -144,12 +176,20 @@ a {
 }
 
 .hero {
+  width: 100%;
   min-height: calc(100vh - 84px);
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
   align-items: center;
   gap: clamp(3rem, 8vw, 7rem);
-  padding-block: 5.5rem;
+  padding: 5.5rem max(20px, calc((100% - var(--sirina)) / 2));
+  background:
+    linear-gradient(rgba(7, 27, 55, 0.68), rgba(7, 27, 55, 0.68)),
+    url("img/hero.jpg") center / cover no-repeat;
+}
+
+.hero .prednadpis {
+  color: var(--modra-svetla);
 }
 
 .prednadpis {
@@ -164,7 +204,7 @@ a {
 .hero h1 {
   max-width: 760px;
   margin: 0;
-  color: var(--modra-tmava);
+  color: var(--biela);
   font-size: clamp(3.6rem, 7vw, 7.2rem);
   line-height: 0.96;
   letter-spacing: -0.065em;
@@ -173,8 +213,12 @@ a {
 .hero-popis {
   max-width: 620px;
   margin: 1.7rem 0 2.2rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.88);
   font-size: clamp(1.05rem, 2vw, 1.28rem);
+}
+
+.hero .textovy-link {
+  color: var(--biela);
 }
 
 .hero-akcie {
@@ -290,6 +334,34 @@ a {
   font-size: clamp(2.3rem, 5vw, 4.2rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
+}
+
+.nadpis-s-ikonou {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.nadpis-ikona {
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  margin-top: 0.12em;
+  border-radius: 8px;
+  background: rgba(175, 199, 232, 0.22);
+  color: var(--modra-jasna);
+}
+
+.nadpis-ikona svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.paticka .nadpis-ikona {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--modra-svetla);
 }
 
 .sekcia-popis {
@@ -742,7 +814,7 @@ a {
     min-height: auto;
     grid-template-columns: 1fr;
     gap: 3.5rem;
-    padding-block: 4.5rem;
+    padding: 4.5rem 16px;
   }
 
   .hero h1 {

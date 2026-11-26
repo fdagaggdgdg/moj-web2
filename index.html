@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Osobné portfólio s ukážkami mojich projektov.">
-  <title>Meno Priezvisko — Portfólio</title>
+  <title>Andrej Patkaň — Portfólio</title>
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="hlavicka" id="domov">
     <nav class="navigacia obsah" aria-label="Hlavná navigácia">
-      <a class="logo" href="#domov" aria-label="Domov">MP<span>.</span></a>
+      <a class="logo" href="#domov" aria-label="Domov">AP<span>.</span></a>
 
       <button class="menu-tlacidlo" type="button" aria-expanded="false" aria-controls="menu">
         <span class="menu-ciara"></span>
@@ -32,7 +32,7 @@
     <section class="hero obsah" aria-labelledby="hero-nadpis">
       <div class="hero-text zjav-vstup">
         <p class="prednadpis">Ahoj, som</p>
-        <h1 id="hero-nadpis">Meno Priezvisko</h1>
+        <h1 id="hero-nadpis">Andrej Patkaň</h1>
         <p class="hero-popis">
           Tvorím moderné digitálne zážitky, ktoré majú jasný účel,
           intuitívne fungujú a pôsobia prehľadne.
@@ -72,7 +72,15 @@
         <div class="sekcia-hlava zjav">
           <div>
             <p class="prednadpis">Vybrané práce</p>
-            <h2 id="projekty-nadpis">Projekty</h2>
+            <h2 class="nadpis-s-ikonou" id="projekty-nadpis">
+              <span class="nadpis-ikona" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="2"/>
+                  <path d="M3 9h18M8 6.5h.01M11 6.5h.01"/>
+                </svg>
+              </span>
+              <span>Projekty</span>
+            </h2>
           </div>
           <p class="sekcia-popis">Niekoľko ukážok práce zameranej na dizajn, funkčnosť a používateľský zážitok.</p>
         </div>
@@ -145,11 +153,19 @@
     <section class="sekcia o-mne" id="o-mne" aria-labelledby="o-mne-nadpis">
       <div class="obsah o-mne-grid">
         <figure class="o-mne-fotka zjav">
-          <img src="img/fotka.jpg" alt="Andrej Patkan">
+          <img src="img/fotka.jpg" alt="Andrej Patkaň">
         </figure>
         <div class="o-mne-text zjav">
           <p class="prednadpis">Niečo o sebe</p>
-          <h2 id="o-mne-nadpis">Rád premieňam nápady na použiteľné riešenia</h2>
+          <h2 class="nadpis-s-ikonou" id="o-mne-nadpis">
+            <span class="nadpis-ikona" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="3.5"/>
+                <path d="M5 20a7 7 0 0 1 14 0"/>
+              </svg>
+            </span>
+            <span>Rád premieňam nápady na použiteľné riešenia</span>
+          </h2>
           <p>
             Zaujímam sa o digitálny dizajn, tvorbu webov a technológie,
             ktoré ľuďom zjednodušujú každodenné úlohy. Pri práci spájam
@@ -175,12 +191,20 @@
     <div class="obsah paticka-vnutro zjav">
       <div>
         <p class="prednadpis">Máš projekt alebo nápad?</p>
-        <h2>Poďme sa spojiť.</h2>
+        <h2 class="nadpis-s-ikonou">
+          <span class="nadpis-ikona" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"/>
+              <path d="m4 7 8 6 8-6"/>
+            </svg>
+          </span>
+          <span>Poďme sa spojiť.</span>
+        </h2>
       </div>
       <a class="tlacidlo tlacidlo-svetle" href="mailto:meno@example.sk">Napísať správu <span aria-hidden="true">→</span></a>
     </div>
     <div class="obsah paticka-spodok">
-      <p>© <span id="rok"></span> Meno Priezvisko</p>
+      <p>© <span id="rok"></span> Andrej Patkaň</p>
       <a href="#domov">Naspäť hore ↑</a>
     </div>
   </footer>
