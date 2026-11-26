@@ -1,170 +1,94 @@
 # Style guide — vizuálna referencia
 
-Táto referencia opisuje dizajn zachytený na screenshotu webu Univerzity Žilina v Žiline. Slúži ako hlavný vzor pri tvorbe budúcich stránok projektu.
-
-## Zdroj
-
-- Screenshot: `img/Snímka obrazovky 2026-11-26 164226.png`
-- Predmetný dizajn: univerzitný, oficiálny a informučný web
+Táto referencia vychádza zo screenshotu domovskej stránky Žilinskej univerzity v Žiline. Farby sú vizuálne odhady zo screenshotu, nie oficiálne hodnoty značky. Pri interpretácii sa nezapočítava rám prehliadača.
 
 ## Celkový vizuálny dojem
 
-Dizajn pôsobí dôstojne, modernizovane a akademicky. Základ tvorí čistý biely obsahový priestor kombinovaný s tmavomodrou a svetlomodrou identitou. Obsah je organizačný a vizuálne oddelený do jasných zón.
+Web pôsobí ako oficiálna univerzitná informačná stránka: dôveryhodne, prakticky a prehľadne. Identitu nesie tmavomodrá navigácia a výrazné modré titulky, ktoré kontrastujú s bielym pozadím. Svetlozelený hero banner prináša jemný farebný akcent bez toho, aby stránka pôsobila prezdobene.
 
-Hlavné črty:
-
-- veľký kontrast medzi tmavou modrou a bielou
-- úzky a takmer minimalistický horný panel sociálnych ikon
-- masívny modrý navigačný banner
-- čistá, čitateľná typografia bez dekoratívnych prvkov
-- výrazné biele tlačidlá na tmavomodrom pozadí
-- rovné alebo veľmi mierne zaoblené geometrické tvary
-- dostatočný biely okraj a pravidelné odsadenia
+Rozhranie je pomerne husté a obsahovo bohaté, nie minimalistické. Používa viac úrovní navigácie, veľké rozbaľovacie menu, aktuality a kalendár. Pri tvorbe vlastnej stránky možno prevziať farby, typografiu a charakter prvkov, no ponechať viac voľného priestoru.
 
 ## Farebná paleta
 
-| Úloha | Odhadovaná farba | Názov |
+| Použitie | Odhad farby | Poznámka |
 | --- | --- | --- |
-| Primárna tmavomodrá / hlavná navigácia | `#2E4F86` | Kráľovská modrá |
-| Najtmavšia modrá / textové zvýraznenie | `#073F82` | Tmavomodrá |
-| Farba logotypu a hlavných odkazov | `#004A99` | Intenzívna univerzitná modrá |
-| Svetlomodré podfarbenie menu | `#AFC7E8` | Svetlá modrá |
-| Sivobiela plocha | `#F5F7FA` | Svetlá neutrálna |
-| Hlavný text | `#28364F` | Tmavá antracitová |
-| Sekundárny text | `#64748B` | Stredná sivá |
-| Svetlé prvkové okraje | `#D7DEE8` | Svetlosivá |
-| Biela | `#FFFFFF` | Čistá biela |
+| Hlavná navigácia | `#2D3E68` | Tmavá námornícka modrá |
+| Primárne odkazy a tlačidlá | `#003D80` | Sýta univerzitná modrá |
+| Modré nadpisy a ikony | `#344A7B` | O niečo svetlejšia modrá |
+| Hero banner | `#E3F2E5` | Jemná svetlá zelená |
+| Plocha rozbaľovacieho menu | `#FFFFFF` | Biela |
+| Horný panel s ikonami | `#F4F4F4` | Veľmi svetlá sivá |
+| Hlavný text | `#454545` | Tmavosivá |
+| Zvýraznený riadok menu | `#F0F1F3` | Svetlosivá |
+| Doplnkové akcenty kalendára | `#B51F3A`, `#E96B2C`, `#D5A528` | Červená, oranžová a zlatá; používať striedmo |
 
-Doplnkové farby:
+## Písmo a typografia
 
-- tmavohnedý pás vľavo hore: približne `#3E261F`
-- svetločervená sekcia pop-upu v dolnej časti: približne `#F2D8D1`
-- orámovanie kalendára/oznámenia: približne `#D5A84F` a `#E46A31`
-- modrá mapa a časové prvky: približne `#1E63A6`
+Text je bezpätkový, dobre čitateľný a podobá sa bežným systémovým písmam, napríklad Arial alebo Roboto. Zo screenshotu sa nedá spoľahlivo určiť konkrétna rodina písma, preto ju netreba považovať za presne identifikovanú.
 
-## Typografia
+- **Navigácia:** verzálky, stredná veľkosť, výraznejšia hrúbka a mierne zväčšené rozostupy písmen.
+- **Nadpisy:** veľké a tučné; hlavný hero titulok je tmavomodrý.
+- **Bežný text:** stredná veľkosť, tmavosivá, pohodlné riadkovanie.
+- **Nadpisy stĺpcov v rozbaľovacom menu:** verzálky a tučné písmo.
+- **Odkazy v menu a článkoch:** sivé, prevažne bez dekorácie; zvýraznenie môže tvoriť podčiarknutie alebo svetlosivý podklad.
 
-Vzhľad písma zodpovedá modernému groteskovému bezpätkovému fontu. Text v navigácii aj nadpisoch má ľahko kondenzovanú, univerzitnú charakteristiku.
-
-Odporučené implementačné písmo:
-
-- primárne: `Arial, Helvetica, sans-serif`
-- alternatíva: `Inter, system-ui, -apple-system, "Segoe UI", sans-serif`
-
-Typografické pravidlá:
-
-- **Nadpisy:** tučné, veľké, tmavomodré alebo biele
-- **Navigácia:** veľká približne 13–15 px, tučná, písané verzálkami alebo výrazným formátom
-- **Bežný text:** približne 15–16 px, tmavosivý, riadkovanie 1.5
-- **Mikrotext a dátumy:** menšia veľkosť, svetlejšia sivá
-- **Odkazy:** tmavomodré, pri hoveri podčiarknuté alebo mierne zosvetlené
-
-Príklad použitia:
+Odporúčané písmo pre podobný výsledok:
 
 ```css
 body {
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-  color: #28364f;
+  font-family: Arial, Roboto, sans-serif;
+  color: #454545;
   line-height: 1.5;
 }
 ```
 
+## Navigácia a rozloženie
+
+1. **Horný úžitkový panel:** svetlosivý pás s radom kruhových tmavomodrých ikon vľavo a vyhľadávaním či výberom jazyka vpravo.
+2. **Hlavná navigácia:** široký tmavomodrý pás; biele logo je vľavo a vodorovné položky menu vpravo. Položky sú verzálkami a pri niektorých je šípka rozbaľovacieho menu.
+3. **Rozbaľovacie mega menu:** veľký biely panel pod navigáciou, rozdelený na tri stĺpce. Každý stĺpec má výrazný nadpis a pod ním zvislý zoznam odkazov. Aktívna položka má svetlosivý podklad.
+4. **Hero banner:** široká svetlozelená plocha s veľkým tmavomodrým titulkom, grafikou kampusu a tlačidlom.
+5. **Obsah pod hero sekciou:** biele pozadie a viacstĺpcové informačné bloky, napríklad aktuality a kalendár.
+
 ## Tlačidlá a interaktívne prvky
 
-### Primárne tlačidlo
+- Hlavné CTA v hero sekcii je sýtomodré, nízke a výrazne zaoblené do tvaru kapsuly.
+- Text CTA je biely a tučný; na konci je biela šípka smerujúca doprava.
+- Navigácia je prevažne tvorená textovými odkazmi, nie samostatnými tlačidlami.
+- Ikony horného panelu sú biele symboly v tmavomodrých kruhoch.
+- Položka mega menu sa zvýrazňuje svetlosivým vodorovným pásom; odkaz môže byť podčiarknutý.
+- Šípky pri navigačných položkách naznačujú, že sa otvára ďalšia úroveň.
+- Kalendár používa drobné obdĺžnikové prvky s farebnými pozadiami a bielym textom.
 
-V hlavnej sekcii dominuje tmavomodré tlačidlo s bielym textom a zaoblenými okrajmi.
+## Detaily a kontext screenshotu
 
-Vlastnosti:
-
-- tmavomodré alebo kráľovské modré pozadie
-- biely, tučný text
-- vyšší stredný kontrast
-- zaoblený tvar: približne `999px` pri menších tlačidlách
-- šípka doprava ako súčasť textu alebo ikony
-- mierny stín nie je nutný
-- hover má zosvetliť alebo upraviť pozadie
-
-Príklad:
-
-```css
-.button-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.7rem 1.2rem;
-  border: 0;
-  border-radius: 999px;
-  background: #004a99;
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.button-primary:hover {
-  background: #073f82;
-}
-```
-
-### Sekundárne prvky
-
-- odkazy nemajú ťažké rámovanie
-- menu je čisto textové s malým rozostupom medzi položkami
-- ikonové prvky sú kruhové, plnofarebné alebo kontrastne modré
-- tlačidlá kalendára používajú biely podklad, sivé čiarové ohraničenie a malý zaoblený okraj
-- červenooranžové upozornenia majú biely text a hranatý alebo slabo zaoblený roh
-
-## Rozloženie a štruktúra
-
-Stránka používa trojzónový systém:
-
-1. **Horný úzky pás** — tmavohnedá alebo tmavá informačná lišta s malými aplikáciami a jazykovými voľbami.
-2. **Hlavná navigácia** — tmavomodrý banner s logom vľavo a horizontálnym menu vpravo.
-3. **Obsahová plocha** — svetlé pozadie s veľkými bielymi sekciami, nadpismi a viacstĺpcovým rozložením.
-
-Odporúčané pravidlá:
-
-- široký obsah, ale s jasnou maximálnou šírkou
-- hlavný obsah mať zoskupené do 2–4 stĺpcov
-- väčšie vertikálne oddelenie medzi sekciami
-- horizontálne horné menu sa pri menšej šírke zmení na hamburgerové menu
-- na mobiloch majú byť odkazy a tlačidlá dostatočne veľké na dotyk
-
-## Jemné detaily
-
-- používajte hladké hrany bez silnej rušivej textúry
-- mapové a obrázkové sekcie môžu obsahovať svetlo modré čiary alebo geometrické vzory
-- výberové sekcie zvýrazňujte modrou farbou a podčiarknutím
-- okraje a dekorácie majú byť svetlé a tenké
-- nevyhnutné akcenty môžu byť červenooranžové, ale nemajú dominovať nad modrou
-- dátumy a numerické značky môžu mať farebný kontrast pre rýchle skenovanie
+- V dolnej časti screenshotu je viditeľná polopriehľadná tmavosivá vrstva so súhlasom na cookies a tlačidlami. Ide o prekrytie nad stránkou, nie o základnú farbu obsahu.
+- Svetlozelený hero banner obsahuje mapovú alebo kampusovú grafiku; túto ilustráciu možno nahradiť vlastným vizuálom.
+- Screenshot zachytáva otvorené mega menu, preto zakrýva časť hero sekcie aj obsahu pod ňou.
+- Tmavohnedý pás úplne navrchu patrí rozhraniu prehliadača, nie webovej stránke, a nemá sa preberať do dizajnu.
 
 ## Odporúčané CSS tokeny
 
 ```css
 :root {
-  --color-primary: #2e4f86;
-  --color-primary-dark: #073f82;
-  --color-primary-bright: #004a99;
-  --color-primary-pale: #afc7e8;
-  --color-text: #28364f;
-  --color-text-muted: #64748b;
-  --color-border: #d7dee8;
-  --color-neutral: #f5f7fa;
-  --color-white: #ffffff;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-pill: 999px;
-  --shadow-soft: 0 2px 10px rgba(30, 55, 90, 0.12);
+  --color-nav: #2d3e68;
+  --color-primary: #003d80;
+  --color-heading: #344a7b;
+  --color-hero: #e3f2e5;
+  --color-text: #454545;
+  --color-muted: #666666;
+  --color-surface: #ffffff;
+  --color-utility: #f4f4f4;
+  --color-hover: #f0f1f3;
+  --radius-button: 999px;
 }
 ```
 
-## Použitie tejto referencie
+## Zásady pri tvorbe podľa vzoru
 
-Pri tvorbe ďalších častí webu treba najskôr zachovať:
-
-1. tmavomodrú identitu,
-2. vysokú čitateľnosť,
-3. čistú bielu alebo svetlosivú plochu,
-4. zaoblené primárne akčné tlačidlá,
-5. univerzitný a dôveryhodný informačný charakter.
+- Uprednostniť tmavomodrú, bielu a svetlú zelenú; farebné akcenty používať len na doplnkové informácie.
+- Použiť jasnú hierarchiu: horný panel, hlavná navigácia, hero a následne obsahové bloky.
+- Nadpisy a hlavné akcie zvýrazniť modrou farbou, bežný text ponechať tmavosivý.
+- Primárne CTA spraviť kontrastné, s bielym tučným textom a kapsulovým tvarom.
+- Pri mega menu zachovať biely podklad, stĺpcovú štruktúru a nenápadný sivý hover.
+- Pre vlastné portfólio zjednodušiť množstvo navigačných a obsahových prvkov a ponechať viac priestoru medzi sekciami.
